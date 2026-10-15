@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Aryana Mehta: Columbia MBA, pharma, semiconductors and investing.">
+<title>Aryana Mehta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Layout: a typed one-pager. Single column; each entry is a label on the left, the line on the right.
+   Color marks only the section titles and labels: pharma purple, semis blue, investing green. */
+:root{
+  --bg:#141412; --ink:#ece8de; --muted:#9e998e; --line:#2d2b27;
+  --hc:#b597ff; --semi:#6eaeff; --fin:#48d29c;
+  --type:"Courier Prime","Courier New",Courier,monospace;
+  color-scheme:dark;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--type);font-size:16px;line-height:1.6}
+.wrap{max-width:660px;margin:0 auto;padding-block:48px 56px;
+  padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:52px}
+
+.kick{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+header{display:flex;flex-direction:column;gap:16px}
+h1{margin:0;font-weight:700;font-size:clamp(40px,11vw,62px);line-height:1;letter-spacing:-.02em}
+.sub{margin:0;color:var(--muted)}
+.pitch{margin:0;font-size:19px;line-height:1.5;max-width:44ch}
+.classes{margin:0;font-size:19px;font-weight:700;letter-spacing:.02em}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn{font:700 15px/1 var(--type);padding:13px 18px;border:1.5px solid var(--ink);background:var(--ink);color:var(--bg);text-decoration:none;cursor:pointer}
+.btn.alt{background:transparent;color:var(--ink)}
+.btn:focus-visible{outline:2px dashed var(--ink);outline-offset:3px}
+.email{font-size:15px;color:var(--muted);user-select:all;word-break:break-all}
+
+section{--c:var(--hc);display:flex;flex-direction:column;gap:4px}
+section.semi{--c:var(--semi)} section.fin{--c:var(--fin)} section.more{--c:var(--muted)}
+.sect{font-size:clamp(26px,7vw,34px);line-height:1.1;letter-spacing:.04em;text-transform:uppercase;color:var(--c);font-weight:700}
+h2{margin:6px 0 0;font-size:21px;font-weight:700;line-height:1.3}
+.role{margin:0 0 10px;color:var(--muted);font-size:15px}
+.row{display:grid;grid-template-columns:150px 1fr;gap:18px;padding-block:13px;border-top:1px dashed var(--line)}
+.row .k{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--c);font-weight:700;padding-top:2px}
+.row p{margin:0;min-width:0}
+
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);font:700 14px var(--type);padding:10px 16px}
+@media (max-width:480px){.row{grid-template-columns:96px 1fr;gap:12px}.row .k{font-size:11px;letter-spacing:.03em;line-height:1.35}.row p{font-size:15px}}
+</style>
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+<main class="wrap">
+  <header>
+    <div class="kick">Columbia Business School · MBA, Strategy &amp; Finance · May 2027</div>
+    <h1>Aryana Mehta</h1>
+    <p class="classes"><span style="color:var(--hc)">Chemist</span> · <span style="color:var(--semi)">Engineer</span></p>
+    <p class="pitch">I've designed chips, rebuilt the budget at a pharma API maker, and hunted for AI stock ideas.</p>
+    <div class="actions">
+      <a class="btn" href="https://www.linkedin.com/in/aryana-mehta" target="_blank" rel="noopener">LinkedIn →</a>
+      <button class="btn alt" type="button" id="copy">Copy email</button>
+    </div>
+    <div class="email" id="mail">AMehta27@gsb.columbia.edu</div>
+  </header>
+
+  <section>
+    <div class="sect">Pharma</div>
+    <h2>Chief of Staff, Praveen Laboratories</h2>
+    <p class="role">EU-GMP certified API maker serving customers worldwide · Surat, India · 2025</p>
+    <div class="row"><span class="k">Budgeting</span><p>Built the company's first-ever zero-based budget and forecast, line by line. Then modeled the true landed cost of every input to find hidden expenses and test raw-material swaps, weighing margin against quality on each buy.</p></div>
+    <div class="row"><span class="k">Portfolio strategy</span><p>Built a screening model that scored API candidates on market size, growth, competition, pricing pressure and patent risk. It cut 150+ options to 12 finalists, each targeting a ~$6.7B global market.</p></div>
+    <div class="row"><span class="k">Vertical integration</span><p>Designed the capital allocation plan to bring more of production in-house, and turned plant data into calls on procurement, scale-up and portfolio mix.</p></div>
+    <div class="row"><span class="k">Audits &amp; industry</span><p>Led 10+ customer and regulatory audits, and represented the company at CPHI Worldwide and CPHI Korea.</p></div>
+    <div class="row"><span class="k">Healthcare at CBS</span><p>Healthcare Management, Design &amp; Strategy · Biopharma Commercialization · US Healthcare · Operations Strategy · Supply Chain Management</p></div>
+  </section>
+
+  <section class="semi">
+    <div class="sect">Semiconductors</div>
+    <h2>Analog Design Engineer, Texas Instruments</h2>
+    <p class="role">Bangalore · Engineer 2023–25 · Intern 2022–23</p>
+    <div class="row"><span class="k">Chip design</span><p>Directed design execution on 100+ logic chips across automotive, industrial and personal electronics.</p></div>
+    <div class="row"><span class="k">AI data centers</span><p>Pioneered a low-power logic design strategy aimed at AI data center infrastructure, a $5B+ addressable market, built to be first to market at lower production cost.</p></div>
+    <div class="row"><span class="k">Cost</span><p>Optimized chip area during execution for 5–7% cost savings across designs.</p></div>
+    <div class="row"><span class="k">Market research</span><p>Ran competitive benchmarking and chip-level teardowns to find pricing and feature gaps, shaping positioning and low-cost upgrades to win share.</p></div>
+    <div class="row"><span class="k">Automation</span><p>Wrote a Python verification script the team adopted as a drop-in tool. A one-week check now takes one day.</p></div>
+  </section>
+
+  <section class="fin">
+    <div class="sect">Investing</div>
+    <h2>AI Thematic Research Intern, Logos Asset Management</h2>
+    <p class="role">Singapore long-only fund focused on Indian stocks · Remote · Summer 2026</p>
+    <div class="row"><span class="k">Long ideas</span><p>Mapped India's AI investment value chain top-down and ran reverse DCF, DuPont and ROE analysis to land on three picks in telecom, energy and chemicals.</p></div>
+    <div class="row"><span class="k">Short ideas</span><p>Hunted for business models AI could disrupt across Indian healthcare, banking and financial services, and tech.</p></div>
+    <div class="row"><span class="k">Finance at CBS</span><p>Financial Statement Analysis &amp; Valuation · Corporate Financial Management · Mergers &amp; Acquisitions · Strategy Formulation</p></div>
+  </section>
+
+  <section class="more">
+    <div class="sect">Beyond work</div>
+    <div class="row"><span class="k">Education</span><p>BITS Pilani, Hyderabad: dual degree, MSc Chemistry + BE Electronics &amp; Communication</p></div>
+    <div class="row"><span class="k">Leadership</span><p>VP Communications, Columbia Student Investment Management Association · VP Live Show, CBS Follies · Treasurer &amp; Design Lead, Alchemy Chemistry Association (BITS)</p></div>
+    <div class="row"><span class="k">Interests</span><p>State-level badminton (former BITS vice captain) · Stand-up comedy · ON2 salsa · Pichwai painting</p></div>
+    <div class="row"><span class="k">Languages</span><p>English · Gujarati · Hindi</p></div>
+  </section>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function(){
+  var t=document.getElementById('toast'),tm;
+  function show(m){t.textContent=m;t.hidden=false;clearTimeout(tm);tm=setTimeout(function(){t.hidden=true},1600)}
+  document.getElementById('copy').addEventListener('click',function(){
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);show('Email selected')}
+    try{navigator.clipboard.writeText('AMehta27@gsb.columbia.edu').then(function(){show('Email copied')},sel)}catch(e){sel()}
+  });
+})();
+</script>
+
+</body>
+</html>
